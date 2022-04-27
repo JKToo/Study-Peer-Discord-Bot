@@ -32,7 +32,6 @@ def translate(text): #google translate
 
     
 arr = []
-arrHolder = []
 
 @client.event
 async def on_ready():
@@ -69,7 +68,6 @@ async def on_message(message):
             await message.channel.send("There are no more questions")
         else:
             value = arr[number]
-            arrHolder.append(value)
             await message.channel.send(value)
             arr.pop(number)
 
